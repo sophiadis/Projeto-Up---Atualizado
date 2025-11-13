@@ -1,3 +1,14 @@
+@charset "UFT-8";
+:root {
+  --cor-principal: #006b68;
+  --cor-accent: #056b66;
+  --fundo-amarelo: #FFFBDE;
+  --fundo-verde: #90D1C9;
+  --cor-fundo-card: #f9f9e0;
+  --cor-rodape: #a3d5d3;
+  --texto-escuro: #034b48;
+  --branco: #ffffff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +31,20 @@ body {
     color: var(--texto);
     line-height: 1.6;
 }
+html,
+body {
+  height: 100%;
+}
 
-/* NAVBAR DO SEGUNDO CÓDIGO */
+body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #086B68;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #90D1C9; /* Fundo verde */
+  padding-top: 70px; /* NOVO: espaço para a navbar fixa */
+}
 
 /* NAVBAR - FIXA NO TOPO */
 .navbar {
@@ -131,15 +154,22 @@ body {
   border-radius: 6px;
   padding: 8px 10px;
   cursor: pointer;
-
+  transition: background 0.3s;
 }
 
 .account-btn:hover {
   background: #155150; /* Verde mais escuro */
 }
 
-.menu-toggle{
-
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 20px;
+  color: #086B68; /* Verde escuro */
+  cursor: pointer;
+  padding: 8px;
+}
 
 
 /* HEADER ATUALIZADO */

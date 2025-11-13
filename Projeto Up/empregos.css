@@ -1,3 +1,14 @@
+@charset "UFT-8";
+:root {
+  --cor-principal: #006b68;
+  --cor-accent: #056b66;
+  --fundo-amarelo: #FFFBDE;
+  --fundo-verde: #90D1C9;
+  --cor-fundo-card: #f9f9e0;
+  --cor-rodape: #a3d5d3;
+  --texto-escuro: #034b48;
+  --branco: #ffffff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,70 +21,144 @@ body {
     color: #064F4A;
 }
 
-/* HEADER */
-header {
-    background-color: #F8FFF9;
-    border-bottom: 3px solid #A8D5BA;
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 50;
+html,
+body {
+  height: 100%;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #086B68;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #90D1C9; /* Fundo verde */
+  padding-top: 70px; /* NOVO: espaço para a navbar fixa */
 }
 
-.nav-left, .nav-center, .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+/* NAVBAR - FIXA NO TOPO */
+.navbar {
+  background: #ffffff; /* Branco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
+  width: 100%;
+  position: fixed; /* ALTERADO: de relative para fixed */
+  top: 0; /* NOVO: cola no topo */
+  left: 0; /* NOVO: cola na esquerda */
+  z-index: 1000; /* NOVO: z-index maior para ficar acima de tudo */
 }
 
-.logo {
-    width: 40px;
-    height: 40px;
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 30px;
 }
 
-.logo-text {
-    font-weight: 700;
-    color: #0E7C7B;
-    font-size: 18px;
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
-nav a {
-    text-decoration: none;
-    color: #064F4A;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 4px;
+/* SEARCH BOX - VERDE */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #086B68; /* Verde escuro */
+  border-radius: 6px;
+  overflow: hidden;
+  width: 200px;
+  margin-right: auto;
 }
 
-nav a:hover {
-    background-color: #E8F5F2;
+.search-box input {
+  border: 0;
+  padding: 8px 12px;
+  width: 100%;
+  background: #FFFBDE; /* Bege */
+  color: #086B68; /* Verde escuro */
+  flex: 1;
 }
 
-nav a.ativo {
-    border-bottom: 3px solid #0E7C7B;
-    color: #0E7C7B;
+.search-box input::placeholder {
+  color: #086B68; /* Verde escuro */
 }
 
-.login {
-    background-color: #0E7C7B;
-    color: white !important;
-    padding: 10px 20px !important;
-    border-radius: 6px;
-    border: none;
+.search-box button {
+  background: transparent;
+  border: 0;
+  color: #ffffff; /* Branco */
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
-.login:hover {
-    background-color: #0a5f5a;
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #086B68; /* Verde escuro */
+  text-decoration: none;
+  padding: 8px 12px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #09302F; /* Verde mais escuro */
+}
+
+.nav-links a.active {
+  font-weight: 800;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background: #086B68; /* Verde escuro */
+  border-radius: 2px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.account-btn {
+  background: #086B68; /* Verde escuro */
+  color: #ffffff; /* Branco */
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.account-btn:hover {
+  background: #155150; /* Verde mais escuro */
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 20px;
+  color: #086B68; /* Verde escuro */
+  cursor: pointer;
+  padding: 8px;
 }
 
 /* HERO SECTION */

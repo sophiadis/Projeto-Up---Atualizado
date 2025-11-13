@@ -1,14 +1,16 @@
+@charset "UFT-8";
 :root {
-  --cor-principal: #086B68;
-  --cor-accent: #155150;
+  --cor-principal: #006b68;
+  --cor-accent: #056b66;
   --fundo-amarelo: #FFFBDE;
   --fundo-verde: #90D1C9;
-  --cor-fundo-card: #FFFBDE;
-  --cor-rodape: #90D1C9;
-  --texto-escuro: #086B68;
+  --cor-fundo-card: #f9f9e0;
+  --cor-rodape: #a3d5d3;
+  --texto-escuro: #034b48;
   --branco: #ffffff;
 }
 
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,13 +28,25 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--fundo-verde); /* Fundo verde */
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #086B68;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #90D1C9; /* Fundo verde */
   padding-top: 70px; /* NOVO: espaço para a navbar fixa */
 }
 
-/* NAVBAR - FIXA NO TOPO (SEGUNDO CÓDIGO) */
+/* NAVBAR - FIXA NO TOPO */
 .navbar {
-  background: var(--branco); /* Branco */
+  background: #ffffff; /* Branco */
   box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
   width: 100%;
   position: fixed; /* ALTERADO: de relative para fixed */
@@ -62,7 +76,7 @@ body {
 .search-box {
   display: flex;
   align-items: center;
-  background: var(--cor-principal); /* Verde escuro */
+  background: #086B68; /* Verde escuro */
   border-radius: 6px;
   overflow: hidden;
   width: 200px;
@@ -73,19 +87,19 @@ body {
   border: 0;
   padding: 8px 12px;
   width: 100%;
-  background: var(--fundo-amarelo); /* Bege */
-  color: var(--texto-escuro); /* Verde escuro */
+  background: #FFFBDE; /* Bege */
+  color: #086B68; /* Verde escuro */
   flex: 1;
 }
 
 .search-box input::placeholder {
-  color: var(--texto-escuro); /* Verde escuro */
+  color: #086B68; /* Verde escuro */
 }
 
 .search-box button {
   background: transparent;
   border: 0;
-  color: var(--branco); /* Branco */
+  color: #ffffff; /* Branco */
   padding: 8px 12px;
   cursor: pointer;
 }
@@ -98,7 +112,7 @@ body {
 }
 
 .nav-links a {
-  color: var(--cor-principal); /* Verde escuro */
+  color: #086B68; /* Verde escuro */
   text-decoration: none;
   padding: 8px 12px;
   font-weight: 600;
@@ -107,7 +121,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--texto-escuro); /* Verde mais escuro */
+  color: #09302F; /* Verde mais escuro */
 }
 
 .nav-links a.active {
@@ -121,7 +135,7 @@ body {
   bottom: -8px;
   width: 100%;
   height: 3px;
-  background: var(--cor-principal); /* Verde escuro */
+  background: #086B68; /* Verde escuro */
   border-radius: 2px;
 }
 
@@ -132,20 +146,28 @@ body {
 }
 
 .account-btn {
-  background: var(--cor-principal); /* Verde escuro */
-  color: var(--branco); /* Branco */
+  background: #086B68; /* Verde escuro */
+  color: #ffffff; /* Branco */
   border: 0;
   border-radius: 6px;
   padding: 8px 10px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .account-btn:hover {
-  background: var(--cor-accent); /* Verde mais escuro */
+  background: #155150; /* Verde mais escuro */
 }
 
 .menu-toggle {
-
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 20px;
+  color: #086B68; /* Verde escuro */
+  cursor: pointer;
+  padding: 8px;
+}
 
 /* BANNER PRINCIPAL */
 .banner-principal {
@@ -336,10 +358,6 @@ footer {
   .nav-links a {
     padding: 12px 20px;
     font-size: 1.1rem;
-  }
-  
-  body {
-    padding-top: 65px; /* AJUSTE PARA MOBILE */
   }
 }
 

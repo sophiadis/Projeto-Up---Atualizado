@@ -14,16 +14,29 @@
     <style></style>
 </head>
 <body>
-   <header> 
-    <nav>
-        <a href="inicio.html">Início</a>
+   <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+
+      <div class="search-box">
+        <input type="text" placeholder="Buscar">
+        <button aria-label="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <nav class="nav-links" id="navLinks" aria-label="menu principal">
+        <a href="inicio.html" class="active">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="biblioteca.html">Biblioteca</a>
         <a href="testes.html">Testes</a>
         <a href="empregos.html">Empregos</a>
-        <a href="inicio.html">Início</a>
-        <a href="conta.html">Conta</a>
-    </nav>
+      </nav>
+
+      <div class="nav-icons">
+        <button class="account-btn" aria-label="conta"><i class="fa-regular fa-user"></i></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="abrir menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
 
     <div class="container">
         <h1 id="h1sobre"> Conheça o projeto que vai mudar sua carreira</h1>
