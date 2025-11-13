@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="empregos.css">
+    <title>Empregos - Projeto Up</title>
+    <link rel="icon" type="imagem/png" href="imagem/Logo da Up.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <img src="imagem/Logo da Up.png" alt="Logo" class="logo">
+                <span class="logo-text">Projeto Up</span>
+            </div>
+            <div class="nav-center">
+                <a href="inicio.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="biblioteca.html">Biblioteca</a>
+                <a href="testes.html">Testes</a>
+                <a href="empregos.html" class="ativo">Empregos</a>
+            </div>
+            <div class="nav-right">
+                <a href="conta.html" class="login">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O seu emprego está aqui</h1>
+            <p>Encontre a oportunidade perfeita para sua carreira</p>
+        </div>
+        <div class="hero-image">
+            <!-- Aqui você pode adicionar uma ilustração SVG ou imagem -->
+            <svg viewBox="0 0 300 300" width="300" height="300">
+                <!-- Ilustração simplificada de profissional -->
+                <circle cx="150" cy="80" r="40" fill="#0E7C7B"/>
+                <rect x="100" y="130" width="100" height="80" fill="#0E7C7B" rx="10"/>
+                <rect x="130" y="160" width="40" height="50" fill="#F8FFF9"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="conteudo">
+        <!-- FILTROS LATERAIS -->
+        <aside class="filtros">
+            <h3>Filtrar por</h3>
+            
+            <div class="filtro-grupo">
+                <label>Buscar vaga:</label>
+                <input type="text" id="busca" placeholder="Digite o cargo...">
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Por cargo:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" class="filtro-checkbox" value="desenvolvedor"> Desenvolvedor</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="designer"> Designer</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="marketing"> Marketing</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="vendas"> Vendas</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="rh"> RH</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Nível:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" class="filtro-checkbox" value="junior"> Junior</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="pleno"> Pleno</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="senior"> Sênior</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Jornada:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" class="filtro-checkbox" value="integral"> Integral</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="meio-periodo"> Meio período</label>
+                    <label><input type="checkbox" class="filtro-checkbox" value="freelancer"> Freelancer</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Localização:</label>
+                <input type="text" id="localizacao" placeholder="Cidade...">
+            </div>
+        </aside>
+
+        <!-- VAGAS -->
+        <main class="vagas">
+            <div class="vagas-header">
+                <h2>Vagas Disponíveis</h2>
+                <button class="enviar-btn" onclick="abrirModal()">+ Enviar Currículo</button>
+            </div>
+
+            <div class="cards" id="cards-vagas">
+                <!-- Cards serão inseridos aqui pelo JavaScript -->
+            </div>
+
+            <div class="em-progresso">
+                <button class="btn-progresso">Em progresso</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL DE CANDIDATURA -->
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <h2>Se Candidatar</h2>
+            
+            <form id="form-candidatura">
+                <label>Selecione a vaga:</label>
+                <select id="vaga-select" required>
+                    <option value="">-- Escolha uma vaga --</option>
+                </select>
+
+                <label>Nome Completo:</label>
+                <input type="text" id="nome" placeholder="Seu nome" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+
+                <label>Telefone:</label>
+                <input type="tel" id="telefone" placeholder="(11) 99999-9999" required>
+
+                <label>Currículo (PDF ou DOC):</label>
+                <input type="file" id="curriculo" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit" class="btn-enviar">Enviar Candidatura</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Nome da empresa/projeto:</strong> Projeto UP</p>
+        <p><strong>Localização:</strong> Natal, Rio Grande do Norte</p>
+        <p><strong>E-mail:</strong> Projeto.Up@gmail.com</p>
+        <div class="footer-links">
+            <a href="#">Segurança</a> | 
+            <a href="#">Privacidade</a> | 
+            <a href="#">Termos</a>
+        </div>
+    </footer>
+
+    <script src="emprego.js"></script>
+</body>
+</html>

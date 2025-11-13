@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testes - Plataforma UP</title>
+   <link rel="icon" type="imagem/png" href="imagem/Logo da Up.png">
+  <link rel="stylesheet" href="testes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="imagem/Logo da Up.png" alt="Logomarca UP"> <!--mudar o caminho e deixar o nome da imagem-->
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Buscar">
+        <button aria-label="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+       <nav>
+        <a href="inicio.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="biblioteca.html">Biblioteca</a>
+        <a href="testes.html">Testes</a>
+        <a href="empregos.html">Empregos</a>
+        <a href="inicio.html">Início</a>
+        <a href="conta.html">Conta</a>
+    </nav>
+
+      <div class="nav-icons">
+        <button class="account-btn" aria-label="conta"><i class="fa-regular fa-user"></i></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="abrir menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== CONTEÚDO ========== -->
+  <section class="titulo">
+    <h1>Conheça mais sobre você</h1>
+    <p>Escolha um dos testes abaixo para começar</p>
+  </section>
+
+  <section class="container-testes">
+
+   <!-- TESTES COM LINKS EXTERNOS - CARD COMPLETO CLICÁVEL -->
+    <a href="https://www.16personalities.com/br/teste-de-personalidade" target="_blank" class="card">
+      <h3>Quem é você na carreira?</h3>
+      <span class="status">Teste rápido</span>
+    </a>
+
+
+   <a href="https://www.testevocacional.org/" target="_blank" class="card">
+      <h3>Teste de vocação</h3>
+      <span class="status">Recomendado</span>
+    </a>
+
+    <div class="card" onclick="abrirTeste('trajetoria-talentos.html')">
+      <h3>Trajetória de talentos</h3>
+      <span class="status">Em desenvolvimento</span>
+    </div>
+
+   <a href=" https://pt.quizur.com/quiz/teste-de-aptidao-profissonal-1nEOJ" target="_blank" class="card">
+      <h3>Perfil de aptidões</h3>
+      <span class="status">Teste rápido</span>
+    </a>
+
+   
+
+    <div class="card" onclick="abrirTeste('analise-potencial.html')">
+      <h3>Análise de potencial</h3>
+      <span class="status">Em desenvolvimento</span>
+    </div>
+
+    <div class="card" onclick="abrirTeste('trilhas-inspiram.html')">
+      <h3>Trilhas que inspiram</h3>
+      <span class="status">Em breve</span>
+    </div>
+
+    <a href="https://satepsi.cfp.org.br/" target="_blank" class="card">
+      <h3>Rumo à realização</h3>
+      <span class="status">Teste rápido</span>
+    </a>
+
+
+    
+    <div class="card" onclick="abrirTeste('trabalho-equipe.html')">
+      <h3>Trabalho em equipe</h3>
+      <span class="status">Em breve</span>
+    </div>
+
+  </section>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer>
+    <p>© 2025 Plataforma de Oportunidades</p>
+  </footer>
+
+<script src="testes.js"></script>
+</body>
+</html>

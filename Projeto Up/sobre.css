@@ -1,0 +1,232 @@
+@charset "UFT-8";
+@charset "UFT-8";
+
+* {
+
+  font-family: Poppins, sans-serif ;
+
+}
+
+body {
+  background-color: #90D1C9;
+}
+
+#h1sobre{
+  font-size: 5dvh;
+}
+
+.oquefazemos{
+  padding-left: 3dvh;
+  padding-right: 3dvh;
+}
+
+.textodoquefazemos{
+  color:#086B67;
+  background-color: #fffbde;
+  padding: 3dvh;
+  border-radius: 3%;
+}
+
+.titulos {
+   text-shadow: 2px 2px 4px #FFFBDE;
+   color: #086B67;
+}
+
+.desenvolvedores-titulo {
+  padding-left: 3dvh;
+  padding-right: 3dvh;
+  margin-top: 2rem; /* Espaço acima do título */
+  margin-bottom: 0.5rem; /* Diminuí bastante o espaço abaixo do título */
+  text-align: center;
+}
+
+.ajudar{
+  padding-left: 3dvh;
+  padding-right: 3dvh;
+}
+
+.textodoajudar{
+  color:#086B67;
+  background-color: #fffbde;
+  padding: 3dvh;
+  border-radius: 3%;
+}
+
+.ideia{
+  padding-left: 3dvh;
+  padding-right: 3dvh;
+}
+
+.textodaideia{
+  color:#086B67;
+  background-color: #fffbde;
+  padding: 3dvh;
+  border-radius: 3%;
+}
+
+
+/* CONTAINER PRINCIPAL DOS DESENVOLVEDORES - NOVO */
+/*.container-desenvolvedores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 0.03rem;
+}*/
+/* CONTAINER PRINCIPAL DOS DESENVOLVEDORES - NOVO */
+.container-desenvolvedores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 2rem; /* Diminuí o padding vertical */
+  margin-top: 0; /* Removi completamente o margin-top */
+}
+
+/* CARD DO DESENVOLVEDOR - ATUALIZADO */
+.desenvolvedor {
+  background-color: #fffbde;
+  border-radius: 12px;
+  width: 200px; /* Card maior */
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.desenvolvedor:hover {
+  transform: translateY(-5px);
+}
+
+/* FOTO MAIOR E QUADRADA */
+.photo-square {
+  width: 150px; /* Foto maior */
+  height: 150px; /* Mantém proporção quadrada */
+  background: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.photo-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NOME DO DESENVOLVEDOR */
+.desenvolvedor-name {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #086B67;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .container-desenvolvedores {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .desenvolvedor {
+    width: 180px;
+    padding: 1rem;
+  }
+  
+  .photo-square {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-desenvolvedores {
+    gap: 1rem;
+  }
+  
+  .desenvolvedor {
+    width: 160px;
+    padding: 0.8rem;
+  }
+  
+  .photo-square {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .desenvolvedor-name {
+    font-size: 0.9rem;
+  }
+}
+
+
+.container{
+  display: flex;
+  align-items: center;
+  color: #086B67;
+  background-color:#fffbde;
+  gap: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.desenvolvedor {
+  padding-left: 3dvh;
+  padding-right: 3dvh;
+  display: inline-block;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.desenvolvedor {
+  width: 160px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.desenvolvedores {
+ background-color: #fffbde;
+ border-radius: 5%;
+ width: 160px;
+}
+
+.photo-square {
+  width: 120px;
+  height: 100px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  
+}
+
+.photo-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.desenvolvedor-name {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 85%;
+}
+
+@media (max-width: 480px) {
+  .desenvolvedor { width: 110px; }
+  .photo-square { width: 110px; height: 110px; }
+}

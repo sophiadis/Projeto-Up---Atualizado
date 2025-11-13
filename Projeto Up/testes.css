@@ -1,0 +1,316 @@
+@charset "UFT-8";
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #086B68;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #90D1C9; /* Fundo verde */
+  padding-top: 70px; /* NOVO: espaço para a navbar fixa */
+}
+
+/* NAVBAR - FIXA NO TOPO */
+.navbar {
+  background: #ffffff; /* Branco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
+  width: 100%;
+  position: fixed; /* ALTERADO: de relative para fixed */
+  top: 0; /* NOVO: cola no topo */
+  left: 0; /* NOVO: cola na esquerda */
+  z-index: 1000; /* NOVO: z-index maior para ficar acima de tudo */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 30px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* SEARCH BOX - VERDE */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #086B68; /* Verde escuro */
+  border-radius: 6px;
+  overflow: hidden;
+  width: 200px;
+  margin-right: auto;
+}
+
+.search-box input {
+  border: 0;
+  padding: 8px 12px;
+  width: 100%;
+  background: #FFFBDE; /* Bege */
+  color: #086B68; /* Verde escuro */
+  flex: 1;
+}
+
+.search-box input::placeholder {
+  color: #086B68; /* Verde escuro */
+}
+
+.search-box button {
+  background: transparent;
+  border: 0;
+  color: #ffffff; /* Branco */
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #086B68; /* Verde escuro */
+  text-decoration: none;
+  padding: 8px 12px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #09302F; /* Verde mais escuro */
+}
+
+.nav-links a.active {
+  font-weight: 800;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background: #086B68; /* Verde escuro */
+  border-radius: 2px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.account-btn {
+  background: #086B68; /* Verde escuro */
+  color: #ffffff; /* Branco */
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+
+}
+
+.account-btn:hover {
+  background: #155150; /* Verde mais escuro */
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 20px;
+  color: #086B68; /* Verde escuro */
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* TÍTULO - VERDE */
+.titulo {
+  text-align: center;
+  padding: 50px 0 20px;
+  background-color: #90D1C9; /* Verde claro */
+}
+
+.titulo h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #086B68; /* Verde escuro */
+}
+
+.titulo p {
+  color: #086B68; /* Verde escuro */
+}
+
+/* CARDS - BEGE */
+.container-testes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 40px;
+  background-color: #90D1C9; /* Verde claro */
+}
+
+.card {
+  background: #FFFBDE; /* Bege */
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #086B68; /* Borda verde escuro no hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #086B68; /* Verde escuro */
+}
+
+.status {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #086B68; /* Verde escuro */
+}
+
+/* CARD CLICÁVEL (LINK) */
+.card {
+  background: #FFFBDE; /* Bege */
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Remove sublinhado do link */
+  color: inherit; /* Herda a cor do texto */
+}
+
+/* HOVER PARA CARDS CLICÁVEIS */
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #086B68;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #086B68;
+  margin: 0;
+}
+
+.status {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #086B68;
+}
+
+/* CARDS EM DESENVOLVIMENTO (NÃO CLICÁVEIS) */
+.card-desenvolvimento {
+  opacity: 0.7;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.card-desenvolvimento::after {
+  content: "🚧 Em desenvolvimento";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(8, 107, 104, 0.9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card-desenvolvimento:hover::after {
+  opacity: 1;
+}
+
+/* CARDS EM BREVE (NÃO CLICÁVEIS) */
+.card-breve {
+  opacity: 0.7;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.card-breve::after {
+  content: "⏳ Em breve";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(8, 107, 104, 0.9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card-breve:hover::after {
+  opacity: 1;
+}
+
+
+/* RODAPÉ - VERDE */
+footer {
+  padding: 18px 0;
+  width: 100%;
+  background: #90D1C9; /* Verde claro */
+  text-align: center;
+  color: #086B68; /* Verde escuro */
+  font-size: 13px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+  .nav-container {
+    padding: 12px 20px;
+    gap: 15px;
+  }
+  
+  body {
+    padding-top: 65px; /* NOVO: ajuste para mobile */
+  }
+}
